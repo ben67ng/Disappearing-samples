@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Disappearing Text</title>
+<style>
+body { font-family: sans-serif; padding: 20px; }
+#content { padding: 15px; border: 2px solid #ccc; border-radius: 6px; background:#f9f9f9; line-height:1.55; }
+#timer { font-size:18px; font-weight:bold; color:#2e7d32; margin-bottom:10px; }
+#hiddenMessage { display:none; font-weight:bold; font-size:18px; color:#c62828; margin-top:20px; }
+</style>
+</head>
+
+<body>
+
+<div id="timer">Time remaining: 05:00</div>
+
+<div id="content">
+  <h3>Sample Answers</h3>
+
+  <p><strong>1. What can governments do to protect natural areas?</strong><br>
+  Governments can introduce stricter environmental regulations, for example, by limiting construction near national parks or banning harmful chemicals, and at the same time, they can invest in eco-tourism projects, which not only protect ecosystems but also generate income for local communities. I think long-term funding for education and awareness campaigns is just as important, because rules alone are not enough to change people’s behavior.
+  </p>
+
+  <p><strong>2. Do you think natural places are more appealing to older people or younger people? Why?</strong><br>
+  It’s difficult to generalize, but I would say older people often prefer peaceful natural settings like mountains or quiet gardens, since they value relaxation and fresh air, whereas younger people are more likely to be attracted to adventurous activities such as hiking, camping, or water sports. In my view, both groups enjoy nature, but they do so for slightly different purposes—either for calmness or for excitement.
+  </p>
+
+  <p><strong>3. How do people’s habits affect nature?</strong><br>
+  People’s daily habits can have a huge impact on the environment; for instance, throwing away plastic bottles or using private cars too frequently contributes to pollution, while small positive actions such as recycling, taking public transport, or saving electricity can reduce damage significantly. I believe the main issue is not that people lack knowledge, but that they are often unwilling to change their routines.
+  </p>
+</div>
+
+<div id="hiddenMessage">
+  ⏳ Time’s up! Now paraphrase or reproduce the sample answers from memory.
+</div>
+
+<script>
+let timeLeft = 300;
+const timerDisplay = document.getElementById("timer");
+
+const countdown = setInterval(function() {
+  let minutes = Math.floor(timeLeft / 60);
+  let seconds = timeLeft % 60;
+
+  if (minutes < 10) minutes = "0" + minutes;
+  if (seconds < 10) seconds = "0" + seconds;
+
+  timerDisplay.textContent = "Time remaining: " + minutes + ":" + seconds;
+
+  if (timeLeft <= 0) {
+    clearInterval(countdown);
+    document.getElementById("content").style.display = "none";
+    document.getElementById("hiddenMessage").style.display = "block";
+  }
+
+  timeLeft -= 1;
+}, 1000);
+</script>
+
+</body>
+</html>
