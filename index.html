@@ -8,6 +8,7 @@ body { font-family: sans-serif; padding: 20px; }
 #content { padding: 15px; border: 2px solid #ccc; border-radius: 6px; background:#f9f9f9; line-height:1.55; }
 #timer { font-size:18px; font-weight:bold; color:#2e7d32; margin-bottom:10px; }
 #hiddenMessage { display:none; font-weight:bold; font-size:18px; color:#c62828; margin-top:20px; }
+h3 { margin-top: 0; }
 </style>
 </head>
 
@@ -29,6 +30,19 @@ body { font-family: sans-serif; padding: 20px; }
   <p><strong>3. How do people’s habits affect nature?</strong><br>
   People’s daily habits can have a huge impact on the environment; for instance, throwing away plastic bottles or using private cars too frequently contributes to pollution, while small positive actions such as recycling, taking public transport, or saving electricity can reduce damage significantly. I believe the main issue is not that people lack knowledge, but that they are often unwilling to change their routines.
   </p>
+
+  <p><strong>4. Should children be taught to plant more trees and flowers?</strong><br>
+  Yes, because gardening helps children understand the cycle of life and appreciate how fragile the environment is, and it also encourages a sense of responsibility and teamwork, especially if schools make it part of their curriculum. In my opinion, such hands-on activities are far more effective than simply reading about climate change in textbooks, since they allow children to experience the value of nature directly.
+  </p>
+
+  <p><strong>5. Should children know more about stars and planets?</strong><br>
+  I think it’s a great idea, because astronomy can spark curiosity and imagination in young learners, and learning about the universe also makes them realize that Earth is unique and worth protecting. Besides, with today’s technology, lessons about planets can be highly interactive and enjoyable, which means children are more likely to stay engaged and motivated.
+  </p>
+
+  <p><strong>6. What can individuals do to protect oceans and rivers?</strong><br>
+  Individuals can start by reducing plastic consumption, especially single-use items like straws or bags, and they can also join community clean-up campaigns, which raise awareness and have a visible impact on local areas. I believe the most powerful action is to change consumption habits in the first place, because prevention is always better than cure.
+  </p>
+
 </div>
 
 <div id="hiddenMessage">
@@ -36,7 +50,7 @@ body { font-family: sans-serif; padding: 20px; }
 </div>
 
 <script>
-let timeLeft = 300;
+let timeLeft = 300; // 5 minutes
 const timerDisplay = document.getElementById("timer");
 
 const countdown = setInterval(function() {
@@ -51,12 +65,4 @@ const countdown = setInterval(function() {
   if (timeLeft <= 0) {
     clearInterval(countdown);
     document.getElementById("content").style.display = "none";
-    document.getElementById("hiddenMessage").style.display = "block";
-  }
-
-  timeLeft -= 1;
-}, 1000);
-</script>
-
-</body>
-</html>
+    document.getElementById("hiddenMessage").s
