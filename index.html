@@ -50,7 +50,7 @@ h3 { margin-top: 0; }
 </div>
 
 <script>
-let timeLeft = 300; // 6 minutes
+let timeLeft = 360; // 6 minutes
 const timerDisplay = document.getElementById("timer");
 
 const countdown = setInterval(function() {
@@ -65,4 +65,12 @@ const countdown = setInterval(function() {
   if (timeLeft <= 0) {
     clearInterval(countdown);
     document.getElementById("content").style.display = "none";
-    document.getElementById("hiddenMessage").s
+    document.getElementById("hiddenMessage").style.display = "block";
+  }
+
+  timeLeft -= 1;
+}, 1000);
+</script>
+
+</body>
+</html>
